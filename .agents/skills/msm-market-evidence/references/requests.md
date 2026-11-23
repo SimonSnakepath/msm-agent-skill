@@ -19,4 +19,5 @@ History list: {"method":"get_market_evidence","session_id":"<same>","action":"GE
  (filters inside "history": cursor, asset, kind, package, from, to; follow next_cursor until it is null; "kind":"TIER1" lists paid reports)
 History retrieve: "history":{"report_id":"<report_id>"} (inside the same request shape)
 Example call:
-  curl -s -X POST "<endpoint>" -H "Content-Type: application/json" -H "x-msm-api-key: $MSM_API_KEY" -d '{...}'
+  printf 'x-msm-api-key: %s\n' "$MSM_API_KEY" | curl -s -X POST "<endpoint>" -H "Content-Type: application/json" -H @- -d '{...}'
+Do not put the key in the command line, the URL or the body, and do not use curl -v, --trace or set -x. If your tool has a secret-header feature, use that instead.
