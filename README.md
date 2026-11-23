@@ -8,7 +8,7 @@ MSM reports **what the evidence shows, how it was established and what remains u
 
 ## Install the Skill
 
-Skill version: **v0.4.1**
+Skill version: **v0.4.2**
 
 The Skill lives at:
 
@@ -62,4 +62,4 @@ A new verified owner's 50 welcome credits are sufficient for **five Tier 1 repor
 - [Developer Quickstart](https://www.mysellmate.digital/docs/developer-quickstart)
 - [My Sell Mate](https://www.mysellmate.digital)
 
-**Release status:** v0.4.1 validated with a separate Grok Bot using live LOOKUP, Tier 1, Tier 2 and Research History. Other Agent platforms may require different installation and secret configuration. This repository contains instructions, not an API key or an automatic payment mechanism.
+**Release status:** v0.4.2 is the current release candidate. v0.4.1 was validated with a separate Grok Bot using live LOOKUP, Tier 1, Tier 2 and Research History. The v0.4.2 change is limited to a safer example API request in `references/requests.md`, validated locally with a dummy key but not yet independently retested inside Grok Bot. Other Agent platforms may require different installation and secret configuration. This repository contains instructions, not an API key or an automatic payment mechanism.
