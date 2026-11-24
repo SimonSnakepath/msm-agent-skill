@@ -36,6 +36,10 @@ The Agent should be able to load `SKILL.md` and its companion `references/reques
 
 The [Developer Quickstart](https://www.mysellmate.digital/docs/developer-quickstart) is the authority for the live API contract if it differs from this Skill.
 
+## What to ask your Agent
+
+Not sure where to begin once connected? Try [**Beyond the Price: What to Ask Your AI Agent**](WHAT_TO_ASK.md), eight copyable, asset-agnostic questions about evidence limits, source agreement, NFT sales and offers, market depth, token identity and Research History. Replace the bracketed asset placeholder with one you follow. The guide explains what MSM supplies and what your Agent interprets.
+
 ## What an Agent can request
 
 | Capability | Cost | Purpose |
