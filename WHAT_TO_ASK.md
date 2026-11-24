@@ -44,13 +44,13 @@ MSM provides dated, attributed market evidence. **MSM gives the evidence; your A
 
 **What your Agent adds:** A careful comparison, without treating an offer as a guaranteed fill or assuming that sampled sales represent floor-priced NFTs. Trait-specific and item-specific differences may matter.
 
-### 5. What do the observed offers reveal?
+### 5. Could I buy or sell near the floor price?
 
-> For [NFT collection], what do observed collection-wide offers show about demand near the lowest asking price, and what can't they tell me about actually selling an individual NFT?
+> If I wanted to buy or sell an NFT from [NFT collection], how close to the current floor price might a transaction be possible, based on observed listings, collection-wide offers and recent sales? Explain the buying and selling sides separately, and what the evidence cannot tell me.
 
-**What MSM supplies:** Observed offers, relevant bid-side bands, spreads and coverage cautions where available.
+**What MSM supplies:** The lowest observed asking price, nearby listings where available, the best observed collection-wide offer and relevant bid-side depth bands, spreads, and sampled completed sales, together with observation times and coverage cautions.
 
-**What your Agent adds:** Interpretation of potential selling friction. This is **not** verified funded bid depth, guaranteed executable liquidity or a quote for a specific token; item-level and trait offers may be outside the observed scope.
+**What your Agent adds:** A cautious explanation of the price gaps and potential transaction friction, **not** a probability of execution, expected fill price or guarantee that any offer or listing remains available. An individual NFT's traits, item-specific offers, marketplace coverage and unverified funding can change what is actually possible.
 
 ### 6. How broad is buying in the sampled sales?
 
