@@ -1,6 +1,6 @@
 ---
 name: msm-market-evidence
-description: Retrieve dated, sourced market evidence for NFTs, coins and tokenised real-world assets from My Sell Mate (MSM) before explaining or acting on a digital-asset market. Use when you need price references, bid and ask, recent sales, liquidity or evidence limits for a named asset. Needs an Agent that can make HTTP requests and the owner's own MSM API key.
+description: Retrieve dated, sourced market evidence for NFTs, coins and tokenised real-world assets from My Sell Mate (MSM) before explaining or acting on a digital-asset market. Use when you need price references, bid and ask, NFT bidder concentration, recent sales, liquidity or evidence limits for a named asset. Needs an Agent that can make HTTP requests and the owner's own MSM API key.
 ---
 
 # MSM market evidence
@@ -32,7 +32,7 @@ If any of these is missing, say which one and stop.
    - UNRESOLVED: no match. Tell the user. Do not guess. Try a contract address.
 3. Check cost. A Tier 1 report costs 10 credits. The LOOKUP reply includes a credits object. For paying Agents it can show fields such as available_credits and reports_affordable; billing-exempt Agents show billing_exempt instead. Fields can be absent, and the status can be something other than ok. There is no separate balance action. If you cannot tell that a report is affordable, ask the owner.
 4. Tier 1 CONFIRM (spends credits): CONFIRM without a drill_down is the paid Tier 1 report. Send it only after step 2 passed, only as the owner has authorised, with a new unique request_id, and send it once. The only permitted resend is a corrected attempt after a definite 400 (see When something goes wrong).
-5. Read the Tier 1 report. For more depth, request Tier 2 packages: CONFIRM with a drill_down is a free package (up to 20 per report): identity_detail, execution_detail, evidence_reconciliation, order_book_detail. Use a new request_id for each.
+5. Read the Tier 1 report. For more depth, request Tier 2 packages: CONFIRM with a drill_down is a free package (up to 20 per report): identity_detail, execution_detail, evidence_reconciliation, order_book_detail. Use a new request_id for each. For NFT collections, order_book_detail also reports bidder concentration among the returned collection offers: read references/bidder-concentration.md before using it.
 6. Research History (free): list past reports or retrieve one by report_id (shown on History list items). Archived reports are dated, not current.
 
 ## Spending credits
@@ -47,6 +47,7 @@ Spend credits only as your owner has authorised. If the owner has set a budget o
 
 ## Reading the evidence
 - Carry the limits with the figures: known_unknowns, primary_caution and as_of in every report, and interpretation_boundary in Tier 2 packages. A null means "not supplied or not available", not zero.
+- Bidder concentration (NFT order_book_detail only) describes up to 50 returned eligible OpenSea collection offers, not the full book. It does not show whether bidders are funded or whether offers could be executed. A missing or null maker_structure means concentration evidence is unavailable for that report, not zero concentration. Details: references/bidder-concentration.md.
 - as_of is when the evidence was observed, not now. The two kinds of report set it differently: coin reports use the data provider's observation timestamp (so it can be earlier than your request); NFT reports use the time MSM built the evidence.
 - Keep the provider attribution (for example "Data provided by CoinGecko") with any figures you show to others.
 - MSM evidence is not a trading recommendation and does not say what to buy or sell. You may combine it with your own independent analysis. Keep what MSM reported clearly separate from your own conclusions, and do not present MSM as saying more than it states.
