@@ -1,6 +1,6 @@
 # Beyond the Price: What to Ask Your AI Agent
 
-**Eight questions that go beyond a headline price.**
+**Nine questions that go beyond a headline price.**
 
 Already connected your AI Agent to [My Sell Mate (MSM)](https://www.mysellmate.digital)? These are reusable questions you can copy into your Agent. **No question names a particular asset:** replace `[asset]` or `[NFT collection]` with one you're interested in.
 
@@ -52,7 +52,19 @@ MSM provides dated, attributed market evidence. **MSM gives the evidence; your A
 
 **What your Agent adds:** A cautious explanation of the price gaps and potential transaction friction, **not** a probability of execution, expected fill price or guarantee that any offer or listing remains available. An individual NFT's traits, item-specific offers, marketplace coverage and unverified funding can change what is actually possible.
 
-### 6. How broad is buying in the sampled sales?
+### 6. How broad or concentrated is the buying interest behind the bids?
+
+> For [NFT collection], how many distinct wallets are represented in the observed collection-wide offers, and how much of the bid value is concentrated among the largest one and three bidders? Compare this with observed liquidity near the best bid, and explain what the evidence cannot tell me about funding or execution.
+
+**What MSM supplies:** Distinct wallet count, the largest wallet and top three wallets' shares of observed bid value, the maximum number of offers from any one wallet, price-bounded bid capacity and sample limitations.
+
+**What your Agent adds:** Whether observed bid value is broadly distributed or concentrated, and how this relates to liquidity near prevailing market prices.
+
+**Evidence boundary:** Concentration is measured across the returned sample of up to 50 eligible OpenSea collection offers, not specifically within the near-market price bands. Wallets do not necessarily represent separate people. Funding, execution capability, intent and complete market depth are not established.
+
+This intelligence is included in the existing Tier 2 `order_book_detail` package at no additional charge following an authorised Tier 1 report (subject to usage limits). See the [bidder concentration reference](.agents/skills/msm-market-evidence/references/bidder-concentration.md) for interpretation and historical compatibility.
+
+### 7. How broad is buying in the sampled sales?
 
 > In the recent sales MSM sampled for [NFT collection], how many different buyer addresses appeared, and what share of observed buying came from the top one and top three? What can't that tell us?
 
@@ -62,7 +74,7 @@ MSM provides dated, attributed market evidence. **MSM gives the evidence; your A
 
 ## Questions for cryptocurrencies and tokenised assets
 
-### 7. How deep and concentrated is the covered market?
+### 8. How deep and concentrated is the covered market?
 
 > For [cryptocurrency or tokenised asset], how concentrated is provider-reported trading volume across covered venues, and what does the available per-venue order-book depth show? Include excluded markets and coverage limits.
 
@@ -70,7 +82,7 @@ MSM provides dated, attributed market evidence. **MSM gives the evidence; your A
 
 **What your Agent adds:** A comparison of the reported markets. It must not present provider-reported volume as directly observed by MSM or treat per-venue depth as a consolidated, guaranteed executable order book.
 
-### 8. How confidently was this token identified?
+### 9. How confidently was this token identified?
 
 > For [tokenised asset or cryptocurrency], which asset did MSM match, on what basis and with what confidence? What does its available secondary-market evidence show, and what remains outside MSM's view?
 
