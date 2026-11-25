@@ -8,7 +8,7 @@ MSM reports **what the evidence shows, how it was established and what remains u
 
 ## Install the Skill
 
-Skill version: **v0.4.2**
+Skill version: **v0.4.3**
 
 The Skill lives at:
 
@@ -16,7 +16,8 @@ The Skill lives at:
 .agents/skills/msm-market-evidence/
 ├── SKILL.md
 └── references/
-    └── requests.md
+    ├── requests.md
+    └── bidder-concentration.md
 ```
 
 If your Agent supports repository-based Skills, install this folder through its supported Skill installation mechanism, preserving the folder structure. Otherwise, follow that Agent platform's instructions for local or workspace Skills. **Installing the files alone does not connect an Agent to MSM.** Skill discovery, file access, network access and secret storage vary by platform.
@@ -25,7 +26,7 @@ After installation, ask your Agent:
 
 > Load the msm-market-evidence Skill. Explain what MSM can tell me about an NFT or cryptocurrency, and what information you need to begin. Do not make a live request yet.
 
-The Agent should be able to load `SKILL.md` and its companion `references/requests.md`.
+The Agent should be able to load `SKILL.md` and its companion references, `references/requests.md` and `references/bidder-concentration.md`.
 
 ## Connect your Agent to MSM
 
@@ -38,7 +39,7 @@ The [Developer Quickstart](https://www.mysellmate.digital/docs/developer-quickst
 
 ## What to ask your Agent
 
-Not sure where to begin once connected? Try [**Beyond the Price: What to Ask Your AI Agent**](WHAT_TO_ASK.md), eight copyable, asset-agnostic questions about evidence limits, source agreement, NFT sales and offers, market depth, token identity and Research History. Replace the bracketed asset placeholder with one you follow. The guide explains what MSM supplies and what your Agent interprets.
+Not sure where to begin once connected? Try [**Beyond the Price: What to Ask Your AI Agent**](WHAT_TO_ASK.md), nine copyable, asset-agnostic questions about evidence limits, source agreement, NFT sales and offers, bidder concentration, market depth, token identity and Research History. Replace the bracketed asset placeholder with one you follow. The guide explains what MSM supplies and what your Agent interprets.
 
 ## What an Agent can request
 
@@ -63,7 +64,8 @@ A new verified owner's 50 welcome credits are sufficient for **five Tier 1 repor
 
 - [Skill instructions](.agents/skills/msm-market-evidence/SKILL.md)
 - [Request shapes and endpoint](.agents/skills/msm-market-evidence/references/requests.md)
+- [NFT bidder concentration: fields, limits and historical compatibility](.agents/skills/msm-market-evidence/references/bidder-concentration.md)
 - [Developer Quickstart](https://www.mysellmate.digital/docs/developer-quickstart)
 - [My Sell Mate](https://www.mysellmate.digital)
 
-**Release status:** v0.4.2 is the current release candidate. v0.4.1 was validated with a separate Grok Bot using live LOOKUP, Tier 1, Tier 2 and Research History. The v0.4.2 change is limited to a safer example API request in `references/requests.md`, validated locally with a dummy key but not yet independently retested inside Grok Bot. Other Agent platforms may require different installation and secret configuration. This repository contains instructions, not an API key or an automatic payment mechanism.
+**Release status:** v0.4.3 is the current Skill revision on the main branch. It adds NFT bidder concentration guidance for Tier 2 `order_book_detail` and a ninth example question. The underlying MSM functionality has been live-tested, including historical version compatibility and older-session retrieval. Native discovery and end-to-end testing of the revised Skill itself remain pending. v0.4.1 was validated with a separate Grok Bot using live LOOKUP, Tier 1, Tier 2 and Research History. The v0.4.2 change was limited to a safer example API request in `references/requests.md`, validated locally with a dummy key but not yet independently retested inside Grok Bot. Other Agent platforms may require different installation and secret configuration. This repository contains instructions, not an API key or an automatic payment mechanism.
