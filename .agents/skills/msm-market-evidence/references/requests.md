@@ -9,6 +9,7 @@ LOOKUP by contract:
 LOOKUP by name: same, with "lookup":{"name":"PAX Gold"} (if both are sent, the contract address is used).
 SELECT_ALTERNATIVE (ILLUSTRATIVE TEMPLATE, NOT EXECUTABLE JSON: replace the angle-bracket text with the whole "select" object of the chosen candidate, copied exactly as received):
 {"method":"get_market_evidence","session_id":"<same>","action":"SELECT_ALTERNATIVE","selection":<the whole "select" object, unchanged>}
+The request field is "selection" (not "select"), and it holds the chosen candidate's "select" object unchanged. Do not copy the top-level response "selection" metadata into the request.
 Tier 1 CONFIRM (no drill_down; spends credits):
 {"method":"get_market_evidence","session_id":"<same>","action":"CONFIRM","request_id":"<new unique>"}
 REJECT (free; declines the pending proposal; then send a new LOOKUP). CODE-DERIVED SHAPE, NOT YET INDEPENDENTLY VERIFIED against a captured live request body:
